@@ -150,7 +150,7 @@ const Contact = () => {
               href="https://wa.me/2310555234567?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20services."
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 w-full bg-green-600 text-card px-5 py-3.5 rounded-md text-sm font-bold hover:bg-green-700 transition mt-4"
+              className="flex items-center justify-center gap-2 w-full bg-[hsl(142_70%_35%)] text-card px-5 py-3.5 rounded-md text-sm font-bold hover:bg-[hsl(142_70%_30%)] transition mt-4"
             >
               <MessageCircle className="w-5 h-5" />
               Chat on WhatsApp
