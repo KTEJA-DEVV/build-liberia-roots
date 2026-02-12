@@ -41,7 +41,7 @@ const Hero = () => {
               <ArrowRight className="w-5 h-5" />
             </a>
             <a
-              href="https://wa.me/2310555234567?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20services."
+              href="https://wa.me/2310778234567?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20services."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 border-2 border-primary-foreground/30 text-primary-foreground px-7 py-4 rounded-md text-base font-bold hover:border-accent hover:text-accent transition"

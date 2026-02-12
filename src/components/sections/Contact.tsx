@@ -124,9 +124,9 @@ const Contact = () => {
           {/* Info */}
           <div className="lg:col-span-2 space-y-6">
             {[
-              { icon: Phone, label: "Phone", value: "+231 0555 234 567", href: "tel:+2310555234567" },
-              { icon: Mail, label: "Email", value: "info@hawaiiliberia.com", href: "mailto:info@hawaiiliberia.com" },
-              { icon: MapPin, label: "Location", value: "Monrovia, Liberia", href: undefined },
+              { icon: Phone, label: "Phone", value: "0778 234 567 / 0777 111 099", href: "tel:+2310778234567" },
+              { icon: Mail, label: "Email", value: "hawaiigroups@gmail.com", href: "mailto:hawaiigroups@gmail.com" },
+              { icon: MapPin, label: "Location", value: "Catholic Junction, Congotown, Monrovia, Liberia", href: undefined },
               { icon: Clock, label: "Hours", value: "Mon — Sat: 7AM – 6PM", href: undefined },
             ].map((c) => (
               <div key={c.label} className="flex items-start gap-4">
@@ -147,7 +147,7 @@ const Contact = () => {
             ))}
 
             <a
-              href="https://wa.me/2310555234567?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20services."
+              href="https://wa.me/2310778234567?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20services."
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 w-full bg-whatsapp text-card px-5 py-3.5 rounded-md text-sm font-bold hover:bg-whatsapp-hover transition mt-4"
