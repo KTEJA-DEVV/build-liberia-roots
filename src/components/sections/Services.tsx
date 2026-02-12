@@ -1,4 +1,5 @@
 import { Droplets, Search, Layers, Container, Wrench, Ruler } from "lucide-react";
+import p3 from "@/assets/portfolio-3.jpeg";
 
 const services = [
   {
@@ -35,8 +36,14 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="services" className="section-padding bg-background">
-      <div className="container mx-auto">
+    <section id="services" className="relative section-padding overflow-hidden">
+      {/* Background image */}
+      <div className="absolute inset-0">
+        <img src={p3} alt="" className="w-full h-full object-cover" aria-hidden="true" />
+        <div className="absolute inset-0 bg-background/95 backdrop-blur-sm" />
+      </div>
+
+      <div className="relative container mx-auto">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <span className="text-accent font-semibold text-sm uppercase tracking-widest">What We Do</span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold text-foreground mt-3 mb-4">
@@ -51,7 +58,7 @@ const Services = () => {
           {services.map((s) => (
             <div
               key={s.title}
-              className="group bg-card rounded-lg border border-border p-7 hover:border-accent/50 hover:shadow-lg hover:shadow-accent/5 transition-all duration-300"
+              className="group bg-card/90 backdrop-blur-sm rounded-lg border border-border p-7 hover:border-accent/50 hover:shadow-lg hover:shadow-accent/5 transition-all duration-300"
             >
               <div className="w-12 h-12 rounded-md bg-accent/10 flex items-center justify-center mb-5 group-hover:bg-accent/20 transition-colors">
                 <s.icon className="w-6 h-6 text-accent" />

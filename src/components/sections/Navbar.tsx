@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -16,9 +17,15 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-md border-b border-primary-foreground/10">
       <div className="container mx-auto flex items-center justify-between h-16 md:h-20 px-4">
         <a href="#home" className="flex items-center gap-2">
-          <span className="text-xl md:text-2xl font-heading font-extrabold tracking-tight text-primary-foreground">
-            HAWAII<span className="text-accent">.</span>
-          </span>
+          <img src={logo} alt="Hawaii Infrastructure Logo" className="h-10 md:h-12 w-auto" />
+          <div className="flex flex-col leading-none">
+            <span className="text-xl md:text-2xl font-hawaii font-bold tracking-widest text-primary-foreground uppercase">
+              HAWAII
+            </span>
+            <span className="text-[8px] md:text-[9px] font-body tracking-[0.2em] text-primary-foreground/70 uppercase">
+              Infrastructure Liberia Inc
+            </span>
+          </div>
         </a>
 
         {/* Desktop */}
@@ -33,7 +40,7 @@ const Navbar = () => {
             </a>
           ))}
           <a
-            href="tel:+2310555234567"
+            href="tel:+2310778234567"
             className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-5 py-2.5 rounded-md text-sm font-semibold hover:brightness-110 transition"
           >
             <Phone className="w-4 h-4" />
@@ -66,7 +73,7 @@ const Navbar = () => {
               </a>
             ))}
             <a
-              href="tel:+2310555234567"
+              href="tel:+2310778234567"
               className="inline-flex items-center justify-center gap-2 bg-accent text-accent-foreground px-5 py-3 rounded-md text-sm font-semibold mt-2"
             >
               <Phone className="w-4 h-4" />

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&family=Teko:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -15,8 +15,8 @@
     --popover: 0 0% 100%;
     --popover-foreground: 215 30% 12%;
 
-    --primary: 215 65% 18%;
-    --primary-foreground: 45 100% 96%;
+    --primary: 200 85% 30%;
+    --primary-foreground: 0 0% 100%;
 
     --secondary: 210 25% 93%;
     --secondary-foreground: 215 30% 12%;
@@ -24,15 +24,15 @@
     --muted: 210 20% 95%;
     --muted-foreground: 215 12% 48%;
 
-    --accent: 38 92% 50%;
-    --accent-foreground: 215 65% 18%;
+    --accent: 24 85% 50%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 214 20% 88%;
     --input: 214 20% 88%;
-    --ring: 215 65% 18%;
+    --ring: 200 85% 30%;
 
     --radius: 0.5rem;
 
@@ -67,7 +67,7 @@
 
 @layer utilities {
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-accent to-amber-400;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-accent to-orange-400;
   }
   .section-padding {
     @apply py-20 md:py-28 px-4 md:px-8;
