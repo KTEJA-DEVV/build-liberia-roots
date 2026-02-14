@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import p1 from "@/assets/portfolio-1.jpeg";
 import p2 from "@/assets/portfolio-2.jpeg";
 import p3 from "@/assets/portfolio-3.jpeg";
@@ -18,14 +20,16 @@ const projects = [
   { img: p8, title: "Rig at Government Site" },
 ];
 
-// Duplicate for seamless loop
-const allProjects = [...projects, ...projects];
-
 const Portfolio = () => {
+  const [current, setCurrent] = useState(0);
+
+  const prev = () => setCurrent((c) => (c === 0 ? projects.length - 1 : c - 1));
+  const next = () => setCurrent((c) => (c === projects.length - 1 ? 0 : c + 1));
+
   return (
-    <section id="projects" className="py-14 md:py-20 bg-primary overflow-hidden">
-      <div className="container mx-auto px-4 mb-10">
-        <div className="text-center max-w-2xl mx-auto">
+    <section id="projects" className="section-padding bg-primary">
+      <div className="container mx-auto">
+        <div className="text-center max-w-2xl mx-auto mb-12">
           <span className="text-accent font-semibold text-sm uppercase tracking-widest">Our Work</span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold text-primary-foreground mt-3 mb-4">
             Featured Projects
@@ -34,26 +38,60 @@ const Portfolio = () => {
             A showcase of our drilling operations, equipment, and the communities we serve.
           </p>
         </div>
-      </div>
 
-      {/* Marquee */}
-      <div className="relative h-[25vh] min-h-[180px] max-h-[320px]">
-        <div className="flex gap-4 animate-marquee absolute top-0 left-0 h-full">
-          {allProjects.map((p, i) => (
+        {/* Carousel */}
+        <div className="relative flex items-center justify-center">
+          <button
+            onClick={prev}
+            aria-label="Previous"
+            className="absolute left-0 z-10 w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 flex items-center justify-center text-primary-foreground hover:bg-accent hover:text-accent-foreground transition-colors"
+          >
+            <ChevronLeft className="w-5 h-5" />
+          </button>
+
+          <div className="w-full max-w-3xl mx-12 md:mx-16 overflow-hidden rounded-xl">
             <div
-              key={i}
-              className="relative h-full aspect-[4/3] flex-shrink-0 rounded-lg overflow-hidden group"
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${current * 100}%)` }}
             >
-              <img
-                src={p.img}
-                alt={p.title}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                <span className="text-primary-foreground font-heading font-bold text-sm">{p.title}</span>
-              </div>
+              {projects.map((p, i) => (
+                <div key={i} className="w-full flex-shrink-0 flex items-center justify-center">
+                  <div className="relative w-full aspect-[16/10] rounded-xl overflow-hidden group">
+                    <img
+                      src={p.img}
+                      alt={p.title}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-5">
+                      <span className="text-primary-foreground font-heading font-bold text-base md:text-lg">{p.title}</span>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
+          </div>
+
+          <button
+            onClick={next}
+            aria-label="Next"
+            className="absolute right-0 z-10 w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 flex items-center justify-center text-primary-foreground hover:bg-accent hover:text-accent-foreground transition-colors"
+          >
+            <ChevronRight className="w-5 h-5" />
+          </button>
+        </div>
+
+        {/* Dots */}
+        <div className="flex items-center justify-center gap-2 mt-8">
+          {projects.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setCurrent(i)}
+              aria-label={`Go to slide ${i + 1}`}
+              className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+                i === current ? "bg-accent w-7" : "bg-primary-foreground/30 hover:bg-primary-foreground/50"
+              }`}
+            />
           ))}
         </div>
       </div>
