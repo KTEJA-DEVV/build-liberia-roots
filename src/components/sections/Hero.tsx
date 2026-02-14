@@ -36,6 +36,10 @@ const Hero = () => {
               </span>
             </div>
 
+            <div className="mb-2 animate-fade-in-up">
+              <p className="text-accent font-heading text-lg md:text-xl font-bold tracking-wide mb-3">Built to Build</p>
+            </div>
+
             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-heading font-extrabold text-primary-foreground leading-[1.08] mb-6 animate-fade-in-up">
               Clean Water.{" "}
               <br className="hidden sm:block" />
