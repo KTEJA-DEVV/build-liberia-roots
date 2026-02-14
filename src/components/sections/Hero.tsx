@@ -20,7 +20,7 @@ const Hero = () => {
           loading="eager"
         />
         {/* Calming gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/95 via-primary/80 to-accent/40" />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/70 via-primary/55 to-accent/20" />
         {/* Subtle pattern overlay */}
         <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: "radial-gradient(circle at 1px 1px, white 1px, transparent 0)", backgroundSize: "40px 40px" }} />
       </div>
