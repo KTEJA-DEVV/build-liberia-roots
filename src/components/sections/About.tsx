@@ -49,7 +49,7 @@ const About = () => {
                 { year: "2014", text: "Expanded to 5 rigs; partnered with international NGOs." },
                 { year: "2018", text: "100+ boreholes drilled across 8 counties." },
                 { year: "2022", text: "Introduced tractor-mounted rigs for rapid deployment." },
-                { year: "2025", text: "200+ boreholes; Liberia's leading drilling company." },
+                { year: "2025", text: "1000+ boreholes; Liberia's leading drilling company." },
               ].map((m) => (
                 <div key={m.year} className="flex gap-3 sm:gap-4">
                   <div className="flex flex-col items-center">
