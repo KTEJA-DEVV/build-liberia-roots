@@ -22,6 +22,12 @@ const projectTypes = [
   "Other",
 ];
 
+const GOOGLE_MAPS_EMBED_URL =
+  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.!2d-10.7529564!3d6.2763796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMTYnMzUuMCJOIDEwwrA0NScxMC42Ilc!5e0!3m2!1sen!2s!4v1700000000000";
+
+const GOOGLE_MAPS_LINK =
+  "https://www.google.com/maps/place/6%C2%B016'35.0%22N+10%C2%B045'10.6%22W/@6.2763796,-10.7529564,17z";
+
 const Contact = () => {
   const [form, setForm] = useState<FormData>({
     name: "",
@@ -75,56 +81,10 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-5 gap-8 lg:gap-10 max-w-5xl mx-auto">
-          {/* Quick contact — shown first on mobile */}
-          <div className="lg:col-span-2 lg:order-2 space-y-4">
-            {/* WhatsApp CTA — prominent on mobile */}
-            <a
-              href="https://wa.me/2310778234567?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20services."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 w-full bg-whatsapp text-primary-foreground px-5 py-4 rounded-lg text-base font-bold hover:bg-whatsapp-hover active:scale-[0.97] transition-all"
-            >
-              <MessageCircle className="w-5 h-5" />
-              Chat on WhatsApp
-            </a>
-
-            <a
-              href="tel:+2310778234567"
-              className="flex items-center justify-center gap-2 w-full bg-accent text-accent-foreground px-5 py-4 rounded-lg text-base font-bold hover:brightness-110 active:scale-[0.97] transition-all"
-            >
-              <Phone className="w-5 h-5" />
-              Call Now
-            </a>
-
-            <div className="bg-card rounded-lg border border-border p-5 space-y-4">
-              {[
-                { icon: Phone, label: "Phone", value: "0778 234 567 / 0777 111 099", href: "tel:+2310778234567" },
-                { icon: Mail, label: "Email", value: "hawaiigroups@gmail.com", href: "mailto:hawaiigroups@gmail.com" },
-                { icon: MapPin, label: "Office", value: "Catholic Junction, Congotown, Monrovia" },
-                { icon: Clock, label: "Hours", value: "Mon — Sat: 7AM – 6PM" },
-              ].map((c) => (
-                <div key={c.label} className="flex items-start gap-3">
-                  <div className="w-9 h-9 shrink-0 rounded-md bg-accent/10 flex items-center justify-center">
-                    <c.icon className="w-4 h-4 text-accent" />
-                  </div>
-                  <div>
-                    <span className="text-[10px] sm:text-xs text-muted-foreground uppercase tracking-wide">{c.label}</span>
-                    {c.href ? (
-                      <a href={c.href} className="block text-foreground font-medium text-sm hover:text-accent transition-colors">
-                        {c.value}
-                      </a>
-                    ) : (
-                      <p className="text-foreground font-medium text-sm">{c.value}</p>
-                    )}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
+        {/* Main grid: Form + Sidebar (contact info & map) */}
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-10 max-w-6xl mx-auto">
           {/* Form */}
-          <form onSubmit={handleSubmit} className="lg:col-span-3 lg:order-1 space-y-4">
+          <form onSubmit={handleSubmit} className="space-y-4">
             <div className="grid sm:grid-cols-2 gap-4">
               <div>
                 <input name="name" value={form.name} onChange={handleChange} placeholder="Full Name *" className={inputClass} />
@@ -166,6 +126,77 @@ const Contact = () => {
               <p className="text-accent font-medium text-sm mt-2">Thank you! We'll respond within 24 hours.</p>
             )}
           </form>
+
+          {/* Right side: Contact info + Map */}
+          <div className="space-y-4">
+            {/* Quick action buttons */}
+            <div className="grid grid-cols-2 gap-3">
+              <a
+                href="https://wa.me/2310778234567?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20services."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 bg-whatsapp text-primary-foreground px-4 py-3.5 rounded-lg text-sm font-bold hover:bg-whatsapp-hover active:scale-[0.97] transition-all"
+              >
+                <MessageCircle className="w-4 h-4" />
+                WhatsApp
+              </a>
+              <a
+                href="tel:+2310778234567"
+                className="flex items-center justify-center gap-2 bg-accent text-accent-foreground px-4 py-3.5 rounded-lg text-sm font-bold hover:brightness-110 active:scale-[0.97] transition-all"
+              >
+                <Phone className="w-4 h-4" />
+                Call Now
+              </a>
+            </div>
+
+            {/* Contact details */}
+            <div className="bg-card rounded-lg border border-border p-4 sm:p-5 grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {[
+                { icon: Phone, label: "Phone", value: "0778 234 567 / 0777 111 099", href: "tel:+2310778234567" },
+                { icon: Mail, label: "Email", value: "hawaiigroups@gmail.com", href: "mailto:hawaiigroups@gmail.com" },
+                { icon: MapPin, label: "Office", value: "Catholic Junction, Congotown, Monrovia" },
+                { icon: Clock, label: "Hours", value: "Mon — Sat: 7AM – 6PM" },
+              ].map((c) => (
+                <div key={c.label} className="flex items-start gap-3">
+                  <div className="w-8 h-8 shrink-0 rounded-md bg-accent/10 flex items-center justify-center">
+                    <c.icon className="w-4 h-4 text-accent" />
+                  </div>
+                  <div className="min-w-0">
+                    <span className="text-[10px] text-muted-foreground uppercase tracking-wide">{c.label}</span>
+                    {c.href ? (
+                      <a href={c.href} className="block text-foreground font-medium text-xs sm:text-sm hover:text-accent transition-colors truncate">
+                        {c.value}
+                      </a>
+                    ) : (
+                      <p className="text-foreground font-medium text-xs sm:text-sm">{c.value}</p>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Google Map */}
+            <a
+              href={GOOGLE_MAPS_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block rounded-lg overflow-hidden border border-border hover:border-accent/40 transition-colors"
+            >
+              <iframe
+                src={GOOGLE_MAPS_EMBED_URL}
+                className="w-full h-48 sm:h-56 lg:h-64 pointer-events-none"
+                style={{ border: 0 }}
+                allowFullScreen={false}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Hawaii Infrastructure office location - Catholic Junction, Congotown, Monrovia, Liberia"
+              />
+              <div className="bg-card px-4 py-2.5 flex items-center gap-2 text-sm font-medium text-accent">
+                <MapPin className="w-4 h-4" />
+                View on Google Maps
+              </div>
+            </a>
+          </div>
         </div>
       </div>
     </section>

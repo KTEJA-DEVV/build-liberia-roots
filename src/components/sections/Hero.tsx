@@ -77,7 +77,7 @@ const Hero = () => {
       <div className="absolute bottom-0 left-0 right-0 bg-primary/90 backdrop-blur-md border-t border-primary-foreground/10">
         <div className="container mx-auto px-4 py-4 sm:py-5 grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6">
           {[
-            { value: "200+", label: "Boreholes Drilled" },
+            { value: "1000+", label: "Boreholes Drilled" },
             { value: "15+", label: "Years Experience" },
             { value: "10+", label: "Counties Served" },
             { value: "50+", label: "Active Crew" },
