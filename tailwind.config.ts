@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ["Outfit", "sans-serif"],
+        heading: ["Teko", "sans-serif"],
         body: ["DM Sans", "sans-serif"],
         hawaii: ["Teko", "sans-serif"],
       },
