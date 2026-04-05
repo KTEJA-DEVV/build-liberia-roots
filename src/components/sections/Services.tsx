@@ -1,5 +1,4 @@
 import { Droplets, Search, Layers, Container, Wrench, Ruler } from "lucide-react";
-import p3 from "@/assets/portfolio-3.jpeg";
 import serviceGeophysical from "@/assets/service-geophysical.jpg";
 import serviceDrilling from "@/assets/service-drilling.jpg";
 import serviceSedimentary from "@/assets/service-sedimentary.jpg";
@@ -11,85 +10,79 @@ const services = [
   {
     icon: Search,
     title: "Geophysical Surveys",
-    desc: "Comprehensive subsurface investigation using advanced geophysical equipment to identify optimal drilling locations and assess groundwater potential.",
+    desc: "Advanced subsurface investigation to identify optimal drilling locations.",
     image: serviceGeophysical,
   },
   {
     icon: Droplets,
     title: "Borehole Drilling",
-    desc: "Professional motorized and tractor-mounted borehole drilling for communities, institutions, and commercial clients across all terrains.",
+    desc: "Motorized and tractor-mounted drilling for all terrains up to 400m.",
     image: serviceDrilling,
   },
   {
     icon: Layers,
     title: "Sedimentary Drilling",
-    desc: "Specialized sedimentary drilling services for geological exploration, environmental assessments, and resource mapping projects.",
+    desc: "Specialized drilling for geological exploration and resource mapping.",
     image: serviceSedimentary,
   },
   {
     icon: Container,
     title: "Water Tank Construction",
-    desc: "Design and construction of elevated and ground-level water storage tanks to ensure reliable supply for rural and urban areas.",
+    desc: "Elevated and ground-level storage tanks for reliable water supply.",
     image: serviceTank,
   },
   {
     icon: Wrench,
-    title: "Pump Installation & Maintenance",
-    desc: "Expert installation of submersible and hand pumps, with ongoing maintenance and repair programs to maximize uptime.",
+    title: "Pump Installation",
+    desc: "Submersible and hand pump installation with ongoing maintenance.",
     image: servicePump,
   },
   {
     icon: Ruler,
     title: "Infrastructure Development",
-    desc: "General civil works including pipeline installation, water treatment systems, and community water distribution networks.",
+    desc: "Pipeline installation, water treatment, and distribution networks.",
     image: serviceInfrastructure,
   },
 ];
 
 const Services = () => {
   return (
-    <section id="services" className="relative section-padding overflow-hidden">
-      {/* Background image */}
-      <div className="absolute inset-0">
-        <img src={p3} alt="" className="w-full h-full object-cover" aria-hidden="true" />
-        <div className="absolute inset-0 bg-background/95 backdrop-blur-sm" />
-      </div>
-
-      <div className="relative container mx-auto">
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="text-accent font-semibold text-sm uppercase tracking-widest">What We Do</span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold text-foreground mt-3 mb-4">
+    <section id="services" className="section-padding bg-background" aria-labelledby="services-heading">
+      <div className="container mx-auto">
+        <div className="text-center max-w-xl mx-auto mb-10 sm:mb-14">
+          <span className="text-accent font-semibold text-xs sm:text-sm uppercase tracking-widest">What We Do</span>
+          <h2 id="services-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-hawaii font-bold text-foreground mt-2 mb-3">
             Our Services
           </h2>
-          <p className="text-muted-foreground text-base md:text-lg">
-            From survey to completion, we provide end-to-end water infrastructure solutions with the highest standards of quality and safety.
+          <p className="text-muted-foreground text-sm sm:text-base">
+            End-to-end water infrastructure solutions with the highest standards.
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-           {services.map((s) => (
-             <div
-               key={s.title}
-               className="group bg-card/90 backdrop-blur-sm rounded-lg border border-border overflow-hidden hover:border-accent/50 hover:shadow-lg hover:shadow-accent/5 transition-all duration-300"
-             >
-               <div className="relative h-40 overflow-hidden">
-                 <img
-                   src={s.image}
-                   alt={s.title}
-                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                   loading="lazy"
-                 />
-               </div>
-               <div className="p-7">
-                 <div className="w-12 h-12 rounded-md bg-accent/10 flex items-center justify-center mb-5 group-hover:bg-accent/20 transition-colors">
-                   <s.icon className="w-6 h-6 text-accent" />
-                 </div>
-                 <h3 className="text-lg font-heading font-bold text-foreground mb-2">{s.title}</h3>
-                 <p className="text-muted-foreground text-sm leading-relaxed">{s.desc}</p>
-               </div>
-             </div>
-           ))}
-         </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+          {services.map((s) => (
+            <article
+              key={s.title}
+              className="group bg-card rounded-lg border border-border overflow-hidden hover:border-accent/40 hover:shadow-md transition-all duration-300"
+            >
+              <div className="relative h-36 sm:h-40 overflow-hidden">
+                <img
+                  src={s.image}
+                  alt={s.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+                <div className="absolute top-3 left-3 w-10 h-10 rounded-md bg-accent/90 flex items-center justify-center">
+                  <s.icon className="w-5 h-5 text-accent-foreground" />
+                </div>
+              </div>
+              <div className="p-5 sm:p-6">
+                <h3 className="text-base sm:text-lg font-hawaii font-bold text-foreground mb-1.5">{s.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">{s.desc}</p>
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   );

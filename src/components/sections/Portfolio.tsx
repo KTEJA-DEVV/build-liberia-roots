@@ -18,27 +18,26 @@ const projects = [
   { img: p8, title: "Rig at Government Site" },
 ];
 
-// Duplicate for seamless loop
 const allProjects = [...projects, ...projects];
 
 const Portfolio = () => {
   return (
-    <section id="projects" className="py-14 md:py-20 bg-primary overflow-hidden">
-      <div className="container mx-auto px-4 mb-10">
-        <div className="text-center max-w-2xl mx-auto">
-          <span className="text-accent font-semibold text-sm uppercase tracking-widest">Our Work</span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold text-primary-foreground mt-3 mb-4">
+    <section id="projects" className="py-12 sm:py-16 md:py-20 bg-primary overflow-hidden" aria-labelledby="projects-heading">
+      <div className="container mx-auto px-4 mb-8 sm:mb-10">
+        <div className="text-center max-w-xl mx-auto">
+          <span className="text-accent font-semibold text-xs sm:text-sm uppercase tracking-widest">Our Work</span>
+          <h2 id="projects-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-hawaii font-bold text-primary-foreground mt-2 mb-3">
             Featured Projects
           </h2>
-          <p className="text-primary-foreground/70 text-base md:text-lg">
-            A showcase of our drilling operations, equipment, and the communities we serve.
+          <p className="text-primary-foreground/70 text-sm sm:text-base">
+            A showcase of our drilling operations and the communities we serve.
           </p>
         </div>
       </div>
 
       {/* Marquee */}
-      <div className="relative h-[25vh] min-h-[180px] max-h-[320px]">
-        <div className="flex gap-4 animate-marquee absolute top-0 left-0 h-full">
+      <div className="relative h-[200px] sm:h-[240px] md:h-[300px]">
+        <div className="flex gap-3 sm:gap-4 animate-marquee absolute top-0 left-0 h-full">
           {allProjects.map((p, i) => (
             <div
               key={i}
@@ -50,8 +49,8 @@ const Portfolio = () => {
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                <span className="text-primary-foreground font-heading font-bold text-sm">{p.title}</span>
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-3 sm:p-4">
+                <span className="text-primary-foreground font-hawaii font-bold text-sm">{p.title}</span>
               </div>
             </div>
           ))}
