@@ -74,7 +74,7 @@ const Services = () => {
               <div className="relative h-36 sm:h-40 overflow-hidden">
                 <img
                   src={s.image}
-                  alt={s.title}
+                  alt={s.alt}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                 />
