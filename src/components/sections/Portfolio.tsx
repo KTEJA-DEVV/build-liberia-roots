@@ -35,21 +35,22 @@ const Portfolio = () => {
         </div>
       </div>
 
-      {/* Marquee */}
-      <div className="relative group">
-        <div className="flex gap-4 animate-marquee hover:[animation-play-state:paused]">
+      <div className="relative group px-4">
+        <div className="flex gap-4 animate-marquee hover:[animation-play-state:paused] w-max">
           {allProjects.map((p, i) => (
             <div
               key={i}
-              className="relative w-[200px] h-[130px] sm:w-[260px] sm:h-[160px] md:w-[300px] md:h-[180px] flex-shrink-0 rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.1)] group/card transition-transform duration-300 hover:scale-105"
+              className="relative w-[200px] sm:w-[260px] md:w-[300px] flex-shrink-0 overflow-hidden rounded-xl bg-card shadow-md transition-transform duration-300 hover:scale-105"
             >
-              <img
-                src={p.img}
-                alt={p.title}
-                className="w-full h-full object-cover rounded-xl"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-0 group-hover/card:opacity-100 transition-opacity duration-300 flex items-end p-3">
+              <div className="h-[140px] sm:h-[160px] md:h-[180px] w-full bg-muted/40 p-3 flex items-center justify-center overflow-hidden">
+                <img
+                  src={p.img}
+                  alt={p.title}
+                  className="w-full h-full max-w-full max-h-full object-contain rounded-xl"
+                  loading="lazy"
+                />
+              </div>
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-primary/85 via-primary/25 to-transparent px-3 py-3 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                 <span className="text-primary-foreground font-hawaii font-bold text-sm">{p.title}</span>
               </div>
             </div>
