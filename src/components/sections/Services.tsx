@@ -11,8 +11,8 @@ const services = [
     icon: Search,
     title: "Geophysical Surveys",
     desc: "Advanced subsurface investigation to identify optimal drilling locations.",
-    image: serviceGeophysical,
-    alt: "Drilling equipment and pipes stored in Hawaii Infrastructure warehouse for geophysical survey operations",
+    image: serviceInfrastructure,
+    alt: "Hawaii Infrastructure geophysical survey team conducting subsurface investigation in Liberia",
   },
   {
     icon: Droplets,
@@ -25,8 +25,8 @@ const services = [
     icon: Layers,
     title: "Sedimentary Drilling",
     desc: "Specialized drilling for geological exploration and resource mapping.",
-    image: serviceSedimentary,
-    alt: "Completed hand pump borehole installation with concrete apron in a Liberian community",
+    image: servicePump,
+    alt: "Hawaii Infrastructure sedimentary drilling equipment used for geological exploration and resource mapping",
   },
   {
     icon: Container,
@@ -39,15 +39,15 @@ const services = [
     icon: Wrench,
     title: "Pump Installation",
     desc: "Submersible and hand pump installation with ongoing maintenance.",
-    image: servicePump,
-    alt: "Hawaii Infrastructure technicians installing submersible pump equipment on site",
+    image: serviceSedimentary,
+    alt: "Hawaii Infrastructure technicians installing submersible pump at a completed borehole site",
   },
   {
     icon: Ruler,
     title: "Infrastructure Development",
     desc: "Pipeline installation, water treatment, and distribution networks.",
-    image: serviceInfrastructure,
-    alt: "Construction crew building foundation for water infrastructure project in Liberia",
+    image: serviceGeophysical,
+    alt: "Construction crew building water infrastructure and pipeline systems in Liberia",
   },
 ];
 
@@ -69,20 +69,20 @@ const Services = () => {
           {services.map((s) => (
             <article
               key={s.title}
-              className="group bg-card rounded-lg border border-border overflow-hidden hover:border-accent/40 hover:shadow-md transition-all duration-300"
+              className="group bg-card rounded-lg border border-border overflow-hidden hover:border-accent/40 hover:shadow-md transition-all duration-300 flex flex-col"
             >
-              <div className="relative h-36 sm:h-40 overflow-hidden">
+              <div className="relative aspect-[16/10] bg-muted/30 p-2">
                 <img
                   src={s.image}
                   alt={s.alt}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-contain rounded group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                 />
-                <div className="absolute top-3 left-3 w-10 h-10 rounded-md bg-accent/90 flex items-center justify-center">
+                <div className="absolute top-4 left-4 w-10 h-10 rounded-md bg-accent/90 flex items-center justify-center">
                   <s.icon className="w-5 h-5 text-accent-foreground" />
                 </div>
               </div>
-              <div className="p-5 sm:p-6">
+              <div className="p-5 sm:p-6 flex-1">
                 <h3 className="text-base sm:text-lg font-hawaii font-bold text-foreground mb-1.5">{s.title}</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">{s.desc}</p>
               </div>
