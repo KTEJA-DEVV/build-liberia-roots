@@ -109,7 +109,7 @@ export default {
         "fade-in-up": "fade-in-up 0.6s ease-out forwards",
         "fade-in": "fade-in 0.5s ease-out forwards",
         "count-up": "count-up 0.5s ease-out forwards",
-        marquee: "marquee 30s linear infinite",
+        marquee: "marquee 25s linear infinite",
       },
     },
   },
