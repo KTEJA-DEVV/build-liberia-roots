@@ -36,20 +36,20 @@ const Portfolio = () => {
       </div>
 
       {/* Marquee */}
-      <div className="relative h-[200px] sm:h-[240px] md:h-[300px]">
-        <div className="flex gap-3 sm:gap-4 animate-marquee absolute top-0 left-0 h-full">
+      <div className="relative group">
+        <div className="flex gap-4 animate-marquee hover:[animation-play-state:paused]">
           {allProjects.map((p, i) => (
             <div
               key={i}
-              className="relative h-full aspect-[4/3] flex-shrink-0 rounded-lg overflow-hidden group"
+              className="relative w-[200px] h-[130px] sm:w-[260px] sm:h-[160px] md:w-[300px] md:h-[180px] flex-shrink-0 rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.1)] group/card transition-transform duration-300 hover:scale-105"
             >
               <img
                 src={p.img}
                 alt={p.title}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                className="w-full h-full object-cover rounded-xl"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-3 sm:p-4">
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-0 group-hover/card:opacity-100 transition-opacity duration-300 flex items-end p-3">
                 <span className="text-primary-foreground font-hawaii font-bold text-sm">{p.title}</span>
               </div>
             </div>
