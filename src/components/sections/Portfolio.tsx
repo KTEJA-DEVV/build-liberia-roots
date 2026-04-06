@@ -35,23 +35,23 @@ const Portfolio = () => {
         </div>
       </div>
 
-      <div className="relative group px-4">
-        <div className="flex gap-4 animate-marquee hover:[animation-play-state:paused] w-max">
+      <div className="relative">
+        <div className="flex gap-5 animate-marquee hover:[animation-play-state:paused] w-max">
           {allProjects.map((p, i) => (
             <div
               key={i}
-              className="relative w-[200px] sm:w-[260px] md:w-[300px] flex-shrink-0 overflow-hidden rounded-xl bg-card shadow-md transition-transform duration-300 hover:scale-105"
+              className="w-[200px] sm:w-[240px] md:w-[260px] flex-shrink-0 rounded-2xl overflow-hidden bg-card shadow-[0_6px_16px_rgba(0,0,0,0.1)] group"
             >
-              <div className="h-[140px] sm:h-[160px] md:h-[180px] w-full bg-muted/40 p-3 flex items-center justify-center overflow-hidden">
+              <div className="h-[140px] sm:h-[160px] md:h-[180px] w-full overflow-hidden">
                 <img
                   src={p.img}
                   alt={p.title}
-                  className="w-full h-full max-w-full max-h-full object-contain rounded-xl"
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                   loading="lazy"
                 />
               </div>
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-primary/85 via-primary/25 to-transparent px-3 py-3 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                <span className="text-primary-foreground font-hawaii font-bold text-sm">{p.title}</span>
+              <div className="px-3 py-2.5">
+                <span className="text-foreground font-hawaii font-bold text-sm">{p.title}</span>
               </div>
             </div>
           ))}
