@@ -12,36 +12,42 @@ const services = [
     title: "Geophysical Surveys",
     desc: "Advanced subsurface investigation to identify optimal drilling locations.",
     image: serviceGeophysical,
+    alt: "Drilling equipment and pipes stored in Hawaii Infrastructure warehouse for geophysical survey operations",
   },
   {
     icon: Droplets,
     title: "Borehole Drilling",
     desc: "Motorized and tractor-mounted drilling for all terrains up to 400m.",
     image: serviceDrilling,
+    alt: "Hawaii Infrastructure drilling rig in action on a borehole site with dust rising from the ground",
   },
   {
     icon: Layers,
     title: "Sedimentary Drilling",
     desc: "Specialized drilling for geological exploration and resource mapping.",
     image: serviceSedimentary,
+    alt: "Completed hand pump borehole installation with concrete apron in a Liberian community",
   },
   {
     icon: Container,
     title: "Water Tank Construction",
     desc: "Elevated and ground-level storage tanks for reliable water supply.",
     image: serviceTank,
+    alt: "Elevated water storage tank structure built by Hawaii Infrastructure team in rural Liberia",
   },
   {
     icon: Wrench,
     title: "Pump Installation",
     desc: "Submersible and hand pump installation with ongoing maintenance.",
     image: servicePump,
+    alt: "Hawaii Infrastructure technicians installing submersible pump equipment on site",
   },
   {
     icon: Ruler,
     title: "Infrastructure Development",
     desc: "Pipeline installation, water treatment, and distribution networks.",
     image: serviceInfrastructure,
+    alt: "Construction crew building foundation for water infrastructure project in Liberia",
   },
 ];
 
@@ -68,7 +74,7 @@ const Services = () => {
               <div className="relative h-36 sm:h-40 overflow-hidden">
                 <img
                   src={s.image}
-                  alt={s.title}
+                  alt={s.alt}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                 />
