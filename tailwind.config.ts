@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ["Teko", "sans-serif"],
-        body: ["DM Sans", "sans-serif"],
+        heading: ["Montserrat", "sans-serif"],
+        body: ["Montserrat", "sans-serif"],
         hawaii: ["Teko", "sans-serif"],
       },
       colors: {
