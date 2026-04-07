@@ -8,7 +8,6 @@ import p7 from "@/assets/portfolio-7.jpeg";
 import p8 from "@/assets/portfolio-8.jpeg";
 
 const projects = [
-  { img: p3, title: "Drilling Rig Deployment" },
   { img: p4, title: "Successful Borehole Strike" },
   { img: p5, title: "Field Operations" },
   { img: p6, title: "Deep Well Drilling" },
