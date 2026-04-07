@@ -25,13 +25,13 @@ const About = () => {
               From geophysical surveys to pump installation, we manage every phase — ensuring safe, clean water access for thousands of Liberians.
             </p>
 
-            <div className="grid grid-cols-2 gap-3 sm:gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
               {values.map((v) => (
                 <div key={v.title} className="flex items-start gap-3 p-3 rounded-lg bg-card border border-border">
                   <div className="w-9 h-9 shrink-0 rounded-md bg-accent/10 flex items-center justify-center">
                     <v.icon className="w-4 h-4 text-accent" />
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <h4 className="font-hawaii font-bold text-foreground text-sm">{v.title}</h4>
                     <p className="text-muted-foreground text-xs leading-relaxed mt-0.5">{v.desc}</p>
                   </div>
