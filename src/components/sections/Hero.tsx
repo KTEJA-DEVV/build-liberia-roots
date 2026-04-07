@@ -1,5 +1,5 @@
 import heroBg from "@/assets/hero-bg.jpg";
-import { ArrowRight, MessageCircle, Phone } from "lucide-react";
+import { ArrowRight, MessageCircle } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -62,13 +62,6 @@ const Hero = () => {
           >
             <MessageCircle className="w-5 h-5" />
             WhatsApp Us
-          </a>
-          <a
-            href="tel:+2310778234567"
-            className="hero-cta inline-flex items-center justify-center gap-2 bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/25 text-primary-foreground px-7 py-4 rounded-lg text-base font-bold hover:bg-primary-foreground/20 active:scale-[0.97] transition-all sm:hidden"
-          >
-            <Phone className="w-5 h-5" />
-            Call Now
           </a>
         </div>
       </div>
