@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Teko:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -81,4 +81,13 @@ html {
 /* Tap highlight for mobile */
 a, button {
   -webkit-tap-highlight-color: transparent;
+}
+
+/* Hero CTA buttons mobile sizing */
+@media (max-width: 768px) {
+  .hero-cta {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 14px;
+  }
 }

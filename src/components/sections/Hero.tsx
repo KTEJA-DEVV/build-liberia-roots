@@ -49,7 +49,7 @@ const Hero = () => {
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
           <a
             href="#services"
-            className="inline-flex items-center justify-center gap-2 bg-accent text-accent-foreground px-7 py-4 rounded-lg text-base font-bold shadow-lg shadow-accent/25 hover:shadow-accent/40 hover:brightness-110 active:scale-[0.97] transition-all"
+            className="hero-cta inline-flex items-center justify-center gap-2 bg-accent text-accent-foreground px-7 py-4 rounded-lg text-base font-bold shadow-lg shadow-accent/25 hover:shadow-accent/40 hover:brightness-110 active:scale-[0.97] transition-all"
           >
             Explore Services
             <ArrowRight className="w-5 h-5" />
@@ -58,14 +58,14 @@ const Hero = () => {
             href="https://wa.me/2310778234567?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20services."
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 bg-whatsapp text-primary-foreground px-7 py-4 rounded-lg text-base font-bold hover:bg-whatsapp-hover active:scale-[0.97] transition-all"
+            className="hero-cta inline-flex items-center justify-center gap-2 bg-whatsapp text-primary-foreground px-7 py-4 rounded-lg text-base font-bold hover:bg-whatsapp-hover active:scale-[0.97] transition-all"
           >
             <MessageCircle className="w-5 h-5" />
             WhatsApp Us
           </a>
           <a
             href="tel:+2310778234567"
-            className="inline-flex items-center justify-center gap-2 bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/25 text-primary-foreground px-7 py-4 rounded-lg text-base font-bold hover:bg-primary-foreground/20 active:scale-[0.97] transition-all sm:hidden"
+            className="hero-cta inline-flex items-center justify-center gap-2 bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/25 text-primary-foreground px-7 py-4 rounded-lg text-base font-bold hover:bg-primary-foreground/20 active:scale-[0.97] transition-all sm:hidden"
           >
             <Phone className="w-5 h-5" />
             Call Now
