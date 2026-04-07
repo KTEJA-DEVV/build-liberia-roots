@@ -1,11 +1,17 @@
 import p1 from "@/assets/portfolio-1.jpeg";
 import p2 from "@/assets/portfolio-2.jpeg";
-import p3 from "@/assets/portfolio-3.jpeg";
 import p4 from "@/assets/portfolio-4.jpeg";
 import p5 from "@/assets/portfolio-5.jpeg";
 import p6 from "@/assets/portfolio-6.jpeg";
 import p7 from "@/assets/portfolio-7.jpeg";
 import p8 from "@/assets/portfolio-8.jpeg";
+import p9 from "@/assets/portfolio-9.jpeg";
+import p10 from "@/assets/portfolio-10.jpeg";
+import p11 from "@/assets/portfolio-11.jpeg";
+import p12 from "@/assets/portfolio-12.jpeg";
+import p13 from "@/assets/portfolio-13.jpeg";
+import p14 from "@/assets/portfolio-14.jpeg";
+import p15 from "@/assets/portfolio-15.jpeg";
 
 const projects = [
   { img: p4, title: "Successful Borehole Strike" },
@@ -15,6 +21,13 @@ const projects = [
   { img: p2, title: "Team on Site" },
   { img: p1, title: "Equipment & Drill Pipes" },
   { img: p8, title: "Rig at Government Site" },
+  { img: p9, title: "Community Hand Pump" },
+  { img: p10, title: "Drilling in Rural Community" },
+  { img: p11, title: "Geophysical Survey Team" },
+  { img: p12, title: "Water Tank Construction" },
+  { img: p13, title: "Team with Drilling Rig" },
+  { img: p14, title: "WASH Technicians on Site" },
+  { img: p15, title: "Borehole & Water Tower" },
 ];
 
 const allProjects = [...projects, ...projects];
