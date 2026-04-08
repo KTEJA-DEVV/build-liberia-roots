@@ -16,7 +16,7 @@ export default {
       fontFamily: {
         heading: ["Montserrat", "sans-serif"],
         body: ["Montserrat", "sans-serif"],
-        hawaii: ["Teko", "sans-serif"],
+        hawaii: ["Montserrat", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
