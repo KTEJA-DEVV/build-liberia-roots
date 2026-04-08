@@ -50,6 +50,13 @@ const services = [
     image: serviceGeophysical,
     alt: "Construction crew building water infrastructure and pipeline systems in Liberia",
   },
+  {
+    icon: Hammer,
+    title: "Crushing & Screening",
+    desc: "High-capacity crushing and screening operations for aggregates, gravel, and sand production.",
+    image: serviceCrushing,
+    alt: "Heavy-duty crushing and screening machinery processing aggregates on site",
+  },
 ];
 
 const Services = () => {
