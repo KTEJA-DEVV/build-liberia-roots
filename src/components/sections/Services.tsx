@@ -1,10 +1,11 @@
-import { Droplets, Search, Layers, Container, Wrench, Ruler } from "lucide-react";
+import { Droplets, Search, Layers, Container, Wrench, Ruler, Hammer } from "lucide-react";
 import serviceGeophysical from "@/assets/service-geophysical.jpg";
 import serviceDrilling from "@/assets/service-drilling.jpg";
 import serviceSedimentary from "@/assets/service-sedimentary.jpg";
 import serviceTank from "@/assets/service-tank.jpg";
 import servicePump from "@/assets/service-pump.jpg";
 import serviceInfrastructure from "@/assets/service-infrastructure.jpg";
+import serviceCrushing from "@/assets/service-crushing.png";
 
 const services = [
   {
@@ -48,6 +49,13 @@ const services = [
     desc: "Pipeline installation, water treatment, and distribution networks.",
     image: serviceGeophysical,
     alt: "Construction crew building water infrastructure and pipeline systems in Liberia",
+  },
+  {
+    icon: Hammer,
+    title: "Crushing & Screening",
+    desc: "High-capacity crushing and screening operations for aggregates, gravel, and sand production.",
+    image: serviceCrushing,
+    alt: "Heavy-duty crushing and screening machinery processing aggregates on site",
   },
 ];
 
